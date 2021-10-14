@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>¡Crea un nuevo Contacto!</title>
+</head>
+
+<body ng-controller="CrearController">
+    <header class="header" ng-controller="CrearController">
+        <h1 class="header_title">¡Crea un nuevo Contacto!</h1>
+    </header>
+    <section class="form">
+        <label for="name" class="form__label">Nombre</label>
+        <input type="text" id="name" class="form_input" placeholder="Ingresa tu Nombre" ng-model="nameInput">
+        <label for="phone" class="form__label">Numero</label>
+        <input type="text" id="phone" class="form_input" placeholder="Ingresa tu Numero" ng-model="phoneInput">
+        <label for="mail" class="form__label">Correo</label>
+        <input type="email" id="email" class="form_input" placeholder="Ingresa tu Correo" ng-model="emailInput">
+        <a class="form_btn" ng-click="crear()">Crear</a>
+
+    </section>
+    <footer class="footer">
+        <a href="../listaContactos/listaContactos.html" class="footer_btn">Regresar</a>
+    </footer>
+
+
+    <!-- Libreria -->
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <!-- Sweet Alert js -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- FireBase -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+
+    <!-- Controllers -->
+        <!-- App -->
+        <script src="../App.js"></script>
+        <!--crearController -->
+        <script src="Controller.js"></script>
+
+</body>
+</html>
