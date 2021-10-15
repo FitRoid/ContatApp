@@ -6,7 +6,7 @@ contactApp.controller('RegistroController', ['$scope', function($scope) {
 
     firebase.auth().onAuthStateChanged(function(user){
         if(user){
-            window.location="../ListaContactos/ListaContactos.html";
+            window.location="../listaContactos/listaContactos.html";
         }
     });
 
